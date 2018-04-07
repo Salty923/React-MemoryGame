@@ -1,0 +1,6 @@
+.square{
+    background: yellow;
+    height: 50px;
+    box-sizing: border-box;
+    border: 5px solid white;
+}

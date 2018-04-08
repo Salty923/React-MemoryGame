@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/Header.css';
+import './Header.css';
 let score =0;
 let topScore =0;
 

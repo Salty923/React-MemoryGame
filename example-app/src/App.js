@@ -1,16 +1,41 @@
-import React from 'react';
-import Header from "./components/Header";
+import React, { Component } from "react";
 import Body from "./components/Body";
-import Box from "./components/Box";
+import DevDeck from "./components/DevDeck";
+import devs from "./devs.json"
 
 
-const App = () => (
-  <div>
-    <Header />
-    <Body />
-    <Box />
-  </div>
-);
+class App extends Component {
+  // Setting this.state.friends to the friends json array
+  state = {
+    devs
+  };
+
+  clickDev = id => {
+    // Filter this.state.friends for friends with an id not equal to the id being removed
+    const devs = this.state.devs.filter(dev => dev.id !== id);
+    // Set this.state.friends equal to the new friends array
+    this.setState({ devs });
+  };
+
+  // Map over this.state.friends and render a FriendCard component for each friend object
+  render() {
+    return (
+      // <Header />
+      <Body>
+        {this.state.devs.map(dev => (
+          <DevDeck
+            clickDev={this.clickDev}
+            id={dev.id}
+            key={dev.id}
+            image={dev.image}
+          />
+        ))}
+      </Body>
+    );
+  }
+}
 
 export default App;
+
+
 

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Header from "./components/Header";
 import Body from "./components/Body";
 import DevDeck from "./components/DevDeck";
 import devs from "./devs.json"
@@ -20,7 +21,8 @@ class App extends Component {
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
-      // <Header />
+      <div>
+      <Header />
       <Body>
         {this.state.devs.map(dev => (
           <DevDeck
@@ -31,6 +33,7 @@ class App extends Component {
           />
         ))}
       </Body>
+      </div>
     );
   }
 }

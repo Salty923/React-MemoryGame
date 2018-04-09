@@ -11,10 +11,10 @@ class Header extends Component {
                 <div className="App">
                     <header className="App-header">
                         <h3 className="score">Score: <span id="score">{score}</span>|Top Score: <span id="topScore">{topScore}</span></h3>
-                        <h1 className="App-title">Welcome to Princess Tinder!</h1>
+                        <h1 className="App-title">The Developer Deck!</h1>
                     </header>
                     <p className="App-intro">
-                        Can you pick them all with out picking the same one twice?
+                        Click to hire all 12, but not twice!
                     </p>
                 </div>
             </div>

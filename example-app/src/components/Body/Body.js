@@ -1,7 +1,7 @@
 import React from 'react';
 import './Body.css';
 
-const Body = props => <div className="container">{props.children}</div>;
+const Body = props => <div>{props.children}</div>;
 
 
 

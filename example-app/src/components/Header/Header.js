@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Header.css';
-let score =0;
-let topScore =0;
 
-
-class Header extends Component {
-    render() {
-        return (
+ const Header = (props) => (
             <div className='container'>
                 <div className="App">
                     <header className="App-header">
-                        <h3 className="score">Score: <span id="score">{score}</span>|Top Score: <span id="topScore">{topScore}</span></h3>
+                        <h3 className="score">Score: <span id="score">{props.score}</span>|Top Score: <span id="topScore">{props.highScore}</span></h3>
                         <h1 className="App-title">The Developer Deck!</h1>
                     </header>
                     <p className="App-intro">
@@ -19,7 +14,5 @@ class Header extends Component {
                 </div>
             </div>
         );
-    }
-}
 
 export default Header;
